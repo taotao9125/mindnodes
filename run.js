@@ -54,7 +54,7 @@ function genIndexPage(parsedFile) {
 function genMinNodesPage(parsedFile) {
   parsedFile.forEach(el => {
     fse.ensureFileSync(el.target);
-    childProcess.exec(`npx markmap-cli ${el.src} --no-open -o ${el.target}`);
+    childProcess.exec(`npx markmap-cli ${el.src} --no-open --offline -o ${el.target}`);
   });
 }
 
