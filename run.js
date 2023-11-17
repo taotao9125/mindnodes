@@ -42,7 +42,7 @@ function genIndexPage(parsedFile) {
     `.trim();
 
   const indexPageContent = parsedFile.reduce((acc, cur) => {
-    acc = acc + `<li><a href="${cur.target.replace('dist/', '')}">${cur.name}</a></li>`;
+    acc = acc + `<li><a href="${cur.target.replace('dist/', '')}">${cur.dir.split('/').pop()}</a></li>`;
     return acc;
   }, '');
 
